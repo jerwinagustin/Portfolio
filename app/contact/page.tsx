@@ -10,7 +10,7 @@ import Button from '@/components/ui/Button'
 import Input from '@/components/ui/Input'
 import Textarea from '@/components/ui/Textarea'
 import { siteConfig, socialLinks } from '@/lib/constants'
-import { Mail, MapPin, Send, Github, Linkedin, Twitter, CheckCircle2 } from 'lucide-react'
+import { Mail, MapPin, Send, Github, Linkedin, Facebook, CheckCircle2 } from 'lucide-react'
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -24,7 +24,7 @@ type ContactFormData = z.infer<typeof contactSchema>
 const iconMap = {
   github: Github,
   linkedin: Linkedin,
-  twitter: Twitter,
+  facebook: Facebook,
   mail: Mail,
 }
 
