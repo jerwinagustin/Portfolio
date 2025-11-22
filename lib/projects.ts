@@ -45,7 +45,7 @@ export const projects: Project[] = [
     ],
     links: {
       github: 'https://github.com/jerwinagustin/ComSim',
-      demo: 'https://github.com/jerwinagustin/ComSim/raw/main/builds/ComSim-v1.0.0.apk',
+      demo: 'https://github.com/jerwinagustin/ComSim/releases/latest/download/ComSim.apk',
     },
     date: 'January 2025 - April 2025',
     role: 'Mobile Developer',
