@@ -16,13 +16,13 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: 'LinkedIn',
-    href: '#', // TODO: Add your LinkedIn URL
+    href: 'https://www.linkedin.com/in/jerwin-agustin-925163371/',
     icon: 'linkedin',
   },
   {
-    name: 'Twitter',
-    href: '#', // TODO: Add your Twitter/X URL
-    icon: 'twitter',
+    name: 'Facebook',
+    href: 'https://www.facebook.com/09jjjjj',
+    icon: 'facebook',
   },
   {
     name: 'Email',

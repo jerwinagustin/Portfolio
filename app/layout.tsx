@@ -34,12 +34,6 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     siteName: siteConfig.name,
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: `${siteConfig.name} - ${siteConfig.title}`,
-    description: siteConfig.description,
-    creator: '@yourusername', // TODO: Add your Twitter handle
-  },
 }
 
 export default function RootLayout({

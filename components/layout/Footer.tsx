@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import { socialLinks, siteConfig } from '@/lib/constants'
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react'
+import { Github, Linkedin, Facebook, Mail } from 'lucide-react'
 
 const iconMap = {
   github: Github,
   linkedin: Linkedin,
-  twitter: Twitter,
+  facebook: Facebook,
   mail: Mail,
 }
 
