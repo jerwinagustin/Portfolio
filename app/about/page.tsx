@@ -9,24 +9,24 @@ import { Briefcase, GraduationCap, Award, Code } from 'lucide-react'
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen py-12 sm:py-16 lg:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 lg:mb-16"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3 sm:mb-4">
             About <span className="gradient-text">Me</span>
           </h1>
-          <p className="text-xl text-foreground-secondary max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-foreground-secondary max-w-2xl mx-auto px-4">
             Get to know more about my journey, skills, and passion for creating mobile experiences
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12 mb-12 sm:mb-14 lg:mb-16">
           {/* Profile Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -76,22 +76,22 @@ export default function AboutPage() {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6">
-              <Card className="text-center">
-                <p className="text-3xl font-bold gradient-text mb-1">3</p>
-                <p className="text-sm text-foreground-secondary">Projects</p>
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-6">
+              <Card className="text-center touch-manipulation hover:border-primary/50 transition-colors">
+                <p className="text-2xl sm:text-3xl font-bold gradient-text mb-1">3</p>
+                <p className="text-xs sm:text-sm text-foreground-secondary">Projects</p>
               </Card>
-              <Card className="text-center">
-                <p className="text-3xl font-bold gradient-text mb-1">15+</p>
-                <p className="text-sm text-foreground-secondary">Technologies</p>
+              <Card className="text-center touch-manipulation hover:border-primary/50 transition-colors">
+                <p className="text-2xl sm:text-3xl font-bold gradient-text mb-1">15+</p>
+                <p className="text-xs sm:text-sm text-foreground-secondary">Technologies</p>
               </Card>
-              <Card className="text-center">
-                <p className="text-3xl font-bold gradient-text mb-1">2</p>
-                <p className="text-sm text-foreground-secondary">Years Learning</p>
+              <Card className="text-center touch-manipulation hover:border-primary/50 transition-colors">
+                <p className="text-2xl sm:text-3xl font-bold gradient-text mb-1">2</p>
+                <p className="text-xs sm:text-sm text-foreground-secondary">Years Learning</p>
               </Card>
-              <Card className="text-center">
-                <p className="text-3xl font-bold gradient-text mb-1">100%</p>
-                <p className="text-sm text-foreground-secondary">Self-Taught</p>
+              <Card className="text-center touch-manipulation hover:border-primary/50 transition-colors">
+                <p className="text-2xl sm:text-3xl font-bold gradient-text mb-1">100%</p>
+                <p className="text-xs sm:text-sm text-foreground-secondary">Self-Taught</p>
               </Card>
             </div>
           </motion.div>
@@ -102,48 +102,48 @@ export default function AboutPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mb-16"
+          className="mb-12 sm:mb-14 lg:mb-16"
         >
-          <h2 className="text-3xl font-bold mb-8 text-center">
-            <Code className="inline-block w-8 h-8 mr-2 text-primary" />
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
+            <Code className="inline-block w-6 h-6 sm:w-8 sm:h-8 mr-2 text-primary" />
             Technical Skills
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card>
-              <h3 className="text-xl font-bold mb-4 text-primary">Frontend Development</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+            <Card className="hover:border-primary/50 transition-colors">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-primary">Frontend Development</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.frontend.map((skill) => (
-                  <Badge key={skill} variant="primary">
+                  <Badge key={skill} variant="primary" className="text-xs sm:text-sm touch-manipulation">
                     {skill}
                   </Badge>
                 ))}
               </div>
             </Card>
-            <Card>
-              <h3 className="text-xl font-bold mb-4 text-accent">Backend Development</h3>
+            <Card className="hover:border-accent/50 transition-colors">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-accent">Backend Development</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.backend.map((skill) => (
-                  <Badge key={skill} variant="accent">
+                  <Badge key={skill} variant="accent" className="text-xs sm:text-sm touch-manipulation">
                     {skill}
                   </Badge>
                 ))}
               </div>
             </Card>
-            <Card>
-              <h3 className="text-xl font-bold mb-4 text-primary">Database & Storage</h3>
+            <Card className="hover:border-primary/50 transition-colors">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-primary">Database & Storage</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.database.map((skill) => (
-                  <Badge key={skill} variant="default">
+                  <Badge key={skill} variant="default" className="text-xs sm:text-sm touch-manipulation">
                     {skill}
                   </Badge>
                 ))}
               </div>
             </Card>
-            <Card>
-              <h3 className="text-xl font-bold mb-4 text-accent">Tools & Platforms</h3>
+            <Card className="hover:border-accent/50 transition-colors">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-accent">Tools & Platforms</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.tools.map((skill) => (
-                  <Badge key={skill} variant="default">
+                  <Badge key={skill} variant="default" className="text-xs sm:text-sm touch-manipulation">
                     {skill}
                   </Badge>
                 ))}

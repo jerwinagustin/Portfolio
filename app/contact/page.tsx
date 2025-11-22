@@ -58,25 +58,25 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen py-12 sm:py-16 lg:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 lg:mb-16"
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3 sm:mb-4">
             Get In <span className="gradient-text">Touch</span>
           </h1>
-          <p className="text-xl text-foreground-secondary max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-foreground-secondary max-w-2xl mx-auto px-4">
             Have a project in mind or want to collaborate? I&apos;d love to hear from you.
             Let&apos;s create something amazing together!
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-6 lg:gap-8">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -115,8 +115,8 @@ export default function ContactPage() {
             </Card>
 
             <Card>
-              <h3 className="text-xl font-bold mb-4">Follow Me</h3>
-              <div className="flex space-x-3">
+              <h3 className="text-lg sm:text-xl font-bold mb-4">Follow Me</h3>
+              <div className="flex flex-wrap gap-3">
                 {socialLinks.map((social) => {
                   const Icon = iconMap[social.icon as keyof typeof iconMap]
                   return (
@@ -125,10 +125,10 @@ export default function ContactPage() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 flex items-center justify-center rounded-lg bg-background-secondary border border-border hover:border-primary hover:bg-primary/10 transition-all duration-200"
+                      className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-lg bg-background-secondary border border-border hover:border-primary hover:bg-primary/10 active:scale-95 transition-all duration-200 touch-manipulation"
                       aria-label={social.name}
                     >
-                      <Icon className="w-5 h-5" />
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                     </a>
                   )
                 })}
@@ -169,13 +169,14 @@ export default function ContactPage() {
                 </motion.div>
               )}
 
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-5 sm:space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
                   <Input
                     label="Name"
                     placeholder="Your name"
                     {...register('name')}
                     error={errors.name?.message}
+                    className="min-h-[48px]"
                   />
                   <Input
                     label="Email"
@@ -183,6 +184,7 @@ export default function ContactPage() {
                     placeholder="your.email@example.com"
                     {...register('email')}
                     error={errors.email?.message}
+                    className="min-h-[48px]"
                   />
                 </div>
 
@@ -191,6 +193,7 @@ export default function ContactPage() {
                   placeholder="What is this about?"
                   {...register('subject')}
                   error={errors.subject?.message}
+                  className="min-h-[48px]"
                 />
 
                 <Textarea
@@ -199,13 +202,14 @@ export default function ContactPage() {
                   rows={6}
                   {...register('message')}
                   error={errors.message?.message}
+                  className="min-h-[120px]"
                 />
 
                 <Button
                   type="submit"
                   size="lg"
                   disabled={isSubmitting}
-                  className="w-full md:w-auto group"
+                  className="w-full md:w-auto group min-h-[48px] touch-manipulation"
                 >
                   {isSubmitting ? (
                     <>

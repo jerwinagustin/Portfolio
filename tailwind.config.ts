@@ -39,6 +39,15 @@ const config: Config = {
         'scale-in': 'scaleIn 0.3s ease-out',
         'gradient': 'gradient 8s linear infinite',
         'spin-slow': 'spin 20s linear infinite',
+        'bounce-slow': 'bounce 3s ease-in-out infinite',
+      },
+      scale: {
+        '98': '0.98',
+      },
+      screens: {
+        'xs': '475px',
+        'touch': { 'raw': '(hover: none) and (pointer: coarse)' },
+        'mouse': { 'raw': '(hover: hover) and (pointer: fine)' },
       },
       keyframes: {
         fadeIn: {

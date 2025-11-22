@@ -9,6 +9,13 @@ import { siteConfig } from '@/lib/constants'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://jerwinagustin.com'),
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
   title: {
     default: `${siteConfig.name} - ${siteConfig.title}`,
     template: `%s | ${siteConfig.name}`,

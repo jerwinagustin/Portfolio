@@ -19,21 +19,21 @@ export default function Hero() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_110%)]" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
           {/* Left content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8"
           >
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-primary font-medium"
+                className="text-primary font-medium text-sm sm:text-base"
               >
                 Hi, I&apos;m Jerwin Agustin
               </motion.p>
@@ -42,7 +42,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
               >
                 Self-Taught
                 <br />
@@ -53,7 +53,7 @@ export default function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="text-xl text-foreground-secondary max-w-2xl"
+                className="text-base sm:text-lg md:text-xl text-foreground-secondary max-w-2xl"
               >
                 Crafting immersive mobile experiences with clean code and cutting-edge
                 technology. With 2 years of self-directed learning, I specialize in mobile 
@@ -66,16 +66,16 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4"
             >
-              <Link href="/portfolio">
-                <Button size="lg" className="group">
+              <Link href="/portfolio" className="w-full sm:w-auto">
+                <Button size="lg" className="group w-full sm:w-auto min-h-[48px] touch-manipulation">
                   View My Work
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Link href="/contact">
-                <Button variant="outline" size="lg">
+              <Link href="/contact" className="w-full sm:w-auto">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto min-h-[48px] touch-manipulation">
                   Let&apos;s Talk
                 </Button>
               </Link>
@@ -85,16 +85,16 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="flex items-center space-x-4 pt-4"
+              className="flex items-center justify-center sm:justify-start space-x-3 sm:space-x-4 pt-4"
             >
               <a
                 href="https://github.com/jerwinagustin"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center rounded-full bg-background-secondary border border-border hover:border-primary hover:bg-primary/10 transition-all duration-300 hover:scale-110 hover:rotate-12"
+                className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-full bg-background-secondary border border-border hover:border-primary hover:bg-primary/10 transition-all duration-300 hover:scale-110 active:scale-95 touch-manipulation"
                 aria-label="GitHub"
               >
-                <Github className="w-5 h-5" />
+                <Github className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a
                 href="#"

@@ -23,6 +23,19 @@
     text-wrap: balance;
   }
 
+  /* Mobile touch optimization */
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+
+  /* Smooth scroll for mobile */
+  .smooth-scroll {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
   .gradient-text {
     @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
     background-size: 200% auto;
@@ -137,7 +150,13 @@
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
+}
+
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
 }
 
 ::-webkit-scrollbar-track {
@@ -155,9 +174,22 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Selection styling */
 ::selection {
   @apply bg-primary text-white;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }

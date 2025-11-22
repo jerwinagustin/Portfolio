@@ -15,9 +15,9 @@ export default function Card({ children, className, hover = false, onClick }: Ca
     <div
       onClick={onClick}
       className={cn(
-        'relative bg-background-secondary/80 backdrop-blur-sm border border-border rounded-xl p-6 overflow-hidden',
-        hover && 'transition-all duration-500 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-3 hover:bg-background-secondary/90 cursor-pointer group',
-        onClick && 'cursor-pointer',
+        'relative bg-background-secondary/80 backdrop-blur-sm border border-border rounded-xl p-4 sm:p-5 lg:p-6 overflow-hidden',
+        hover && 'transition-all duration-500 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 sm:hover:-translate-y-3 hover:bg-background-secondary/90 cursor-pointer group active:translate-y-0 touch-manipulation',
+        onClick && 'cursor-pointer touch-manipulation active:scale-98',
         className
       )}
     >
