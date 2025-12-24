@@ -172,6 +172,53 @@ export const projects: Project[] = [
       { label: 'Project', value: 'Third Work' },
     ],
   },
+  {
+    id: '4',
+    slug: 'coding-platform',
+    title: 'University Management System',
+    shortDescription: 'A digital platform designed to streamline university operations with secure portals for professors and students.',
+    fullDescription: 'The University Management System is a comprehensive platform designed to manage university operations efficiently. It features dedicated server-side rendered portals for professors to manage courses and students, and for students to enroll and track progress. The system ensures data security using JWT authentication and provides a modern, responsive interface built with React and Vite, powered by a robust Django backend and MongoDB database.',
+    category: 'Full Stack Web App',
+    featured: true,
+    images: {
+      thumbnail: '/images/projects/coding-platform/homepage.png',
+      screenshots: [
+        '/images/projects/coding-platform/homepage.png',
+      ],
+    },
+    technologies: {
+      frontend: ['React', 'Vite', 'JavaScript'],
+      backend: ['Django', 'Python', 'REST API'],
+      database: ['MongoDB'],
+      tools: ['JWT Authentication', 'Node.js'],
+    },
+    features: [
+      'Professor Portal - Secure registration and management interface for faculty',
+      'Student Portal - Dedicated sign-up and specific features for learners',
+      'Secure Access - Data protection utilizing JWT Authentication standards',
+      'Modern Interface - Clean, responsive UI built with React and Vite',
+      'Role-Based Access - Distinct functionality for students and professors',
+    ],
+    challenges: [
+      'Integrating Django backend with React frontend via REST API',
+      'Implementing secure JWT authentication flow',
+      'Designing a schema-less database structure with MongoDB for flexible data',
+    ],
+    solutions: [
+      'Built a clear API layer for frontend-backend communication',
+      'Implemented token-based auth for stateless session management',
+      'Utilized MongoDB flexibility to handle varying user profiles',
+    ],
+    links: {
+      github: 'https://github.com/jerwinagustin/CodingPlatform',
+    },
+    date: 'December 2025',
+    role: 'Full-Stack Developer',
+    metrics: [
+      { label: 'Role', value: 'Full Stack' },
+      { label: 'Stack', value: 'MERN / Django' },
+    ],
+  },
 ]
 
 export const featuredProjects = projects.filter((project) => project.featured)
